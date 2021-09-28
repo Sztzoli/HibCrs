@@ -4,24 +4,20 @@ package hibcrs;
 import org.hibernate.HibernateException;
 
 
-public class ClientCrsBase extends AppCrs{
+public class ClientCrsBase extends AppCrs<Client>{
 
     public ClientCrsBase() {
+        System.out.println("2-------");
     }
-    
-     public ClientCrsBase(AppCrs appcrs) {
+
+    public ClientCrsBase(Class type) {
+        super(type);
     }
-    
-    
-    
-    public void save(Client client) {
-        s.save(client);
+
+    public ClientCrsBase(AppCrs appCrs) {
+        super(appCrs);
     }
-    
-    public void delete(Client client) {
-//        if (1 == 1) {
-//            throw new HibernateException("Hiba");
-//        }
-        s.delete(client);        
-    }
+
+   
+ 
 }
