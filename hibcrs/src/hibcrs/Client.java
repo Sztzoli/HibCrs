@@ -56,6 +56,11 @@ public class Client {
     public void setAddress(List<Address> address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return "Client{" + "id=" + id + ", name=" + name + ", age=" + age + '}';
+    }
     
     
     
